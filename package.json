@@ -8,7 +8,7 @@
   },
   "scripts": {
     "build": "webpack --watch",
-    "sass": "sass --watch ./pages/00-00/css/src:./pages/00-00/css"
+    "sass": "sass --watch ./src/sass:./dist/css-local"
   },
   "dependencies": {
     "sass": "^1.54.9"

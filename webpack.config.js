@@ -1,16 +1,10 @@
 const patch = require('path');
 
-const patchPageName = '00-00';
-const name = 'app';
-
-const inputLink = `./pages/${patchPageName}/js/src/${name}.js`;
-const outputLink = `./pages/${patchPageName}/js`;
-
 module.exports = {
-  entry: { app: inputLink },
+  entry: { app: './src/js/app.js' },
   output: {
-    filename: `${name}.bundle.js`,
-    path: patch.resolve(__dirname, outputLink),
+    filename: `[name].bundle.js`,
+    path: patch.resolve(__dirname, './dist/js-local'),
   },
   mode: 'none',
 };
