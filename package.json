@@ -1,0 +1,16 @@
+{
+  "devDependencies": {
+    "eslint": "^8.23.1",
+    "eslint-config-airbnb-base": "^15.0.0",
+    "eslint-plugin-import": "^2.26.0",
+    "webpack": "^5.74.0",
+    "webpack-cli": "^4.10.0"
+  },
+  "scripts": {
+    "build": "webpack --watch",
+    "sass": "sass --watch ./pages/00-00/css/src:./pages/00-00/css"
+  },
+  "dependencies": {
+    "sass": "^1.54.9"
+  }
+}
