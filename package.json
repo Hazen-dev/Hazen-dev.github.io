@@ -8,7 +8,9 @@
   },
   "scripts": {
     "build": "webpack --watch",
-    "sass": "sass --watch ./src/sass:./dist/css-local"
+    "sass": "sass --watch ./src/sass:./dist/css-local",
+    "eslint": "eslint src/js",
+    "fix": "eslint --fix"
   },
   "dependencies": {
     "sass": "^1.54.9"
