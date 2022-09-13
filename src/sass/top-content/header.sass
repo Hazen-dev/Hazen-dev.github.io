@@ -1,0 +1,73 @@
+body, p
+    margin: 0
+    font-family: 'Poppins', sans-serif
+
+    // HEADER CONTENT
+
+.top
+    $self: &
+    height: 100vh
+    width: 100vw
+    background: blue
+    &__header
+        height: 10%
+        width: 100vw
+        display: flex
+        align-items: center
+        justify-content: space-between
+        background: grey
+        #{$self}__ph-logo
+            display: flex
+            #{$self}__logo
+                width: 3rem
+                height: auto
+                margin-left: 7%
+            #{$self}__header-text
+                margin-left: 2rem
+        #{$self}__burger
+            width: 3rem
+            height: auto
+            margin-right: 1rem
+        #{$self}__ul-element
+            list-style-type: none
+            display: flex
+            &--none
+                display: none
+            #{$self}__element
+                background: red
+
+
+    // MAIN CONTENT
+
+    &__main-content
+        height: 90%
+        width: 100%
+        background: blue
+        display: grid
+        grid-template-columns: 1fr
+        grid-template-rows:  1fr 1.1fr
+        
+        #{$self}__main-text
+            display: flex
+            flex-direction: column
+            align-items: center
+            align-self: center
+            #{$self}__text
+                margin: 0
+                font-size: 2rem
+                text-align: center
+            #{$self}__input
+                width: 85%
+                height: 2.6rem
+                margin-top: 2.5rem
+                justify-self: center
+        #{$self}__main-weather
+            display: flex
+            flex-direction: column
+            align-items: center
+            #{$self}__main-cloud
+                width: 100px
+            #{$self}__main-city
+                font-size: 2.7rem
+            #{$self}__main-temperature
+                font-size: 1.5rem

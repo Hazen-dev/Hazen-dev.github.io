@@ -1,0 +1,85 @@
+body, p {
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+.top {
+  height: 100vh;
+  width: 100vw;
+  background: blue;
+}
+.top__header {
+  height: 10%;
+  width: 100vw;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background: grey;
+}
+.top__header .top__ph-logo {
+  display: flex;
+}
+.top__header .top__ph-logo .top__logo {
+  width: 3rem;
+  height: auto;
+  margin-left: 7%;
+}
+.top__header .top__ph-logo .top__header-text {
+  margin-left: 2rem;
+}
+.top__header .top__burger {
+  width: 3rem;
+  height: auto;
+  margin-right: 1rem;
+}
+.top__header .top__ul-element {
+  list-style-type: none;
+  display: flex;
+}
+.top__header .top__ul-element--none {
+  display: none;
+}
+.top__header .top__ul-element .top__element {
+  background: red;
+}
+.top__main-content {
+  height: 90%;
+  width: 100%;
+  background: blue;
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-template-rows: 1fr 1.1fr;
+}
+.top__main-content .top__main-text {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  align-self: center;
+}
+.top__main-content .top__main-text .top__text {
+  margin: 0;
+  font-size: 2rem;
+  text-align: center;
+}
+.top__main-content .top__main-text .top__input {
+  width: 85%;
+  height: 2.6rem;
+  margin-top: 2.5rem;
+  justify-self: center;
+}
+.top__main-content .top__main-weather {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.top__main-content .top__main-weather .top__main-cloud {
+  width: 100px;
+}
+.top__main-content .top__main-weather .top__main-city {
+  font-size: 2.7rem;
+}
+.top__main-content .top__main-weather .top__main-temperature {
+  font-size: 1.5rem;
+}
+
+/*# sourceMappingURL=header.css.map */
