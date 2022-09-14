@@ -23,7 +23,8 @@ body, p
                 height: auto
                 margin-left: 7%
             #{$self}__header-text
-                margin-left: 2rem
+                margin-left: 3%
+                font-size: 2rem
         #{$self}__burger
             width: 3rem
             height: auto
@@ -46,12 +47,12 @@ body, p
         display: grid
         grid-template-columns: 1fr
         grid-template-rows:  1fr 1.1fr
-        
+
         #{$self}__main-text
             display: flex
             flex-direction: column
-            align-items: center
             align-self: center
+            align-items: center
             #{$self}__text
                 margin: 0
                 font-size: 2rem
@@ -59,15 +60,17 @@ body, p
             #{$self}__input
                 width: 85%
                 height: 2.6rem
-                margin-top: 2.5rem
                 justify-self: center
+                margin-top: 6%
         #{$self}__main-weather
             display: flex
             flex-direction: column
             align-items: center
             #{$self}__main-cloud
-                width: 100px
+                width: 150px
             #{$self}__main-city
                 font-size: 2.7rem
             #{$self}__main-temperature
                 font-size: 1.5rem
+                
+@import 'screen-width' 

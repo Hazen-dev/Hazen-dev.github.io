@@ -1,0 +1,36 @@
+$small: 300px
+$medium: 900px
+
+
+@media screen and (max-width: $small)
+        .top__header-text--none
+            display: none
+        .top__main-cloud
+            width: 120px !important
+@media screen and (min-width: $medium)
+        .top__main-cloud
+            width: 150px !important
+        .top__main-content
+            grid-template-rows: 1fr
+            grid-template-columns:  1.2fr 1fr
+            align-items: center
+            justify-items: center
+        .top__main-text
+            margin: 0 0 7.8rem 2rem
+            align-items: stretch
+        .top__text
+            align-self: stretch
+            width: 100%
+            text-align: start !important
+            font-size: 3rem !important
+        .top__input
+            width: 25rem !important
+        .top__main-weather
+            margin: 0 0 6rem
+
+::-webkit-input-placeholder
+    font-size: 135%
+    color: white
+    background: black
+    text-indent: 15px
+    padding-top: 0px
