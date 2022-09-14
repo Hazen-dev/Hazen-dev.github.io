@@ -4,17 +4,21 @@ body, p {
 }
 
 .top {
+  background-image: url("../../imgs/header-background.png");
+  background-size: cover;
+  background-repeat: no-repeat;
+  background-clip: content-box;
   height: 100vh;
   width: 100vw;
-  background: blue;
 }
 .top__header {
+  color: white;
+  background: rgba(0, 0, 0, 0.4);
   height: 10%;
   width: 100vw;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  background: grey;
 }
 .top__header .top__ph-logo {
   display: flex;
@@ -40,13 +44,9 @@ body, p {
 .top__header .top__ul-element--none {
   display: none;
 }
-.top__header .top__ul-element .top__element {
-  background: red;
-}
 .top__main-content {
   height: 90%;
   width: 100%;
-  background: blue;
   display: grid;
   grid-template-columns: 1fr;
   grid-template-rows: 1fr 1.1fr;
@@ -56,6 +56,8 @@ body, p {
   flex-direction: column;
   align-self: center;
   align-items: center;
+  height: 100%;
+  justify-content: space-around;
 }
 .top__main-content .top__main-text .top__text {
   margin: 0;
@@ -63,12 +65,16 @@ body, p {
   text-align: center;
 }
 .top__main-content .top__main-text .top__input {
-  width: 85%;
+  width: 70%;
   height: 2.6rem;
   justify-self: center;
-  margin-top: 6%;
+  margin-top: 0;
+  background: rgba(0, 0, 0, 0.8);
+  border: none;
+  border-radius: 50%;
 }
 .top__main-content .top__main-weather {
+  color: white;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -84,14 +90,34 @@ body, p {
 }
 
 @media screen and (max-width: 300px) {
-  .top__header-text--none {
+  .top__header .top__ph-logo .top__header-text {
     display: none;
   }
-  .top__main-cloud {
-    width: 120px !important;
+}
+@media screen and (min-width: 500px) and (max-width: 900px) {
+  .top__main-content .top__main-weather {
+    flex-direction: row !important;
+    justify-content: space-around;
+    align-items: center;
+    width: 80%;
+    justify-self: center;
+  }
+  .top__input {
+    justify-self: flex-start !important;
+  }
+}
+@media screen and (min-width: 300px) {
+  .top .top__main-weather .top__main-cloud {
+    width: 120px;
+  }
+  .top__text {
+    font-size: 3rem !important;
   }
 }
 @media screen and (min-width: 900px) {
+  .top__header {
+    height: 13%;
+  }
   .top__main-cloud {
     width: 150px !important;
   }
@@ -100,10 +126,11 @@ body, p {
     grid-template-columns: 1.2fr 1fr;
     align-items: center;
     justify-items: center;
+    height: 87%;
   }
   .top__main-text {
-    margin: 0 0 7.8rem 2rem;
-    align-items: stretch;
+    justify-self: center;
+    justify-content: center !important;
   }
   .top__text {
     align-self: stretch;
@@ -113,6 +140,7 @@ body, p {
   }
   .top__input {
     width: 25rem !important;
+    margin-top: 5rem !important;
   }
   .top__main-weather {
     margin: 0 0 6rem;
@@ -121,7 +149,6 @@ body, p {
 ::-webkit-input-placeholder {
   font-size: 135%;
   color: white;
-  background: black;
   text-indent: 15px;
   padding-top: 0px;
 }

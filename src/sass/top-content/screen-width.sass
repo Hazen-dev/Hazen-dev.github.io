@@ -1,13 +1,29 @@
 $small: 300px
 $medium: 900px
 
-
-@media screen and (max-width: $small)
-        .top__header-text--none
-            display: none
-        .top__main-cloud
-            width: 120px !important
+@media screen and (max-width: 300px)
+    .top__header .top__ph-logo .top__header-text
+        display: none
+@media screen and (min-width: 500px) and (max-width: 900px)
+    .top__main-content .top__main-weather
+        flex-direction: row !important
+        justify-content: space-around
+        align-items: center
+        width: 80%
+        justify-self: center
+    .top__input
+        justify-self: flex-start !important
+@media screen and (min-width: $small)
+        .top
+            $self: &
+            #{$self}__main-weather
+                #{$self}__main-cloud
+                    width: 120px
+        .top__text
+            font-size: 3rem !important
 @media screen and (min-width: $medium)
+        .top__header
+            height: 13%
         .top__main-cloud
             width: 150px !important
         .top__main-content
@@ -15,9 +31,12 @@ $medium: 900px
             grid-template-columns:  1.2fr 1fr
             align-items: center
             justify-items: center
+            height: 87%
         .top__main-text
-            margin: 0 0 7.8rem 2rem
-            align-items: stretch
+            // margin: 0 0 7.8rem 2rem
+            // align-items: stretch
+            justify-self: center
+            justify-content: center !important
         .top__text
             align-self: stretch
             width: 100%
@@ -25,12 +44,12 @@ $medium: 900px
             font-size: 3rem !important
         .top__input
             width: 25rem !important
+            margin-top: 5rem !important
         .top__main-weather
             margin: 0 0 6rem
+@media screen and (min-width: 900px)
+    .top__main-text
 
-::-webkit-input-placeholder
-    font-size: 135%
-    color: white
-    background: black
-    text-indent: 15px
-    padding-top: 0px
+
+
+
