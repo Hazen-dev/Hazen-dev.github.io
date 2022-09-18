@@ -3,14 +3,17 @@
 <head>
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Poppins&display=swap" rel="stylesheet">
-
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300&display=swap" rel="stylesheet">
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Weather</title>
 
     <link rel="stylesheet" href="dist/css-local/top-content/header.css">
+    <link rel="stylesheet" href="dist/css-local/main-content/main.css">
+    <link rel="stylesheet" href="dist/css-local/footer/footer.css">
 </head>
 <body>
     <div class="container">
@@ -20,13 +23,13 @@
                     <img src="dist/imgs/logo.png" alt="logo image" class="top__logo">
                     <p class="top__header-text top__header-text--none">Weather</p>
                 </div>
-                <img src="dist/imgs/add.png" alt="burger image" class="top__burger">
+                <img src="dist/imgs/burger.pmg.png" alt="burger image" class="top__burger">
                 <ul class="top__ul-element top__ul-element--none">
                     <li class="top__element">Home</li>
                     <li class="top__element">Radar</li>
                     <li class="top__element">Map</li>
-                    <li class="top__element">Contact</li>
                 </ul>
+                <li class="top__element kontakt">Contact</li>
             </header>
             <section class="top__main-content">
                 <div class="top__main-text">
@@ -34,12 +37,55 @@
                     <input class="top__input" placeholder="Enter your location" type="text" name="location">
                 </div>
                 <div class="top__main-weather">
-                    <img src="dist/imgs/add.png" alt="cloud image" class="top__main-cloud">
+                    <img width="150px" class="ottawa"/>
                     <p class="top__main-city">Ottawa</p>
-                    <p class="top__main-temperature">Today 20*C</p>
+                    <h6 class="top__main-temperature"></h6>
                 </div>
             </section>
         </article>
+        <article class="wmain">
+            <h1 class="wmain__text">Five Day Forecast</h1>
+            <section class="wmain__container wmain__container--pc">
+                <div class="wmain__day1 wmain__day--pc">
+                    <h2 class="wmain__weak">Monday</h2>
+                    <img width="96px" class="wmain__weather-img" alt="actual weather icon">
+                    <p class="wmain__weather-text">Clody</p>
+                    <h2 class="wmain__temperature">20*C</h2>
+                </div>
+                <div class="wmain__day2 wmain__day--pc">
+                    <h2 class="wmain__weak">Tuesday</h2>
+                    <img width="96px" class="wmain__weather-img" alt="actual weather icon">
+                    <p class="wmain__weather-text">Clody</p>
+                    <h2 class="wmain__temperature">20*C</h2>
+                </div>
+                <div class="wmain__day3 wmain__day--pc">
+                    <h2 class="wmain__weak">Wednesday</h2>
+                    <img width="96px" class="wmain__weather-img" alt="actual weather icon">
+                    <p class="wmain__weather-text">Clody</p>
+                    <h2 class="wmain__temperature">20*C</h2>
+                </div>
+                <div class="wmain__day4 wmain__day--pc">
+                    <h2 class="wmain__weak">Thursday</h2>
+                    <img width="96px" class="wmain__weather-img" alt="actual weather icon">
+                    <p class="wmain__weather-text">Clody</p>
+                    <h2 class="wmain__temperature">20*C</h2>
+                </div>
+                <div class="wmain__day5 wmain__day--pc">
+                    <h2 class="wmain__weak">Friday</h2>
+                    <img width="96px" class="wmain__weather-img" alt="actual weather icon">
+                    <p class="wmain__weather-text">Clody</p>
+                    <h2 class="wmain__temperature">20*C</h2>
+                </div>
+                
+            </section>
+        </article>
+        <footer class="footer">
+            <!-- <img src="dist/imgs/rain.png" alt=""> -->
+            <p class="footer__main-text">H3zen Dev &#169All Rights Reserved</p>
+            <p class="footer__main-text footer__main-text--no-margin">2022 Poland</p>
+        </footer>
     </div>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.6.0/jquery.min.js"></script>
+    <script src="dist/js-local/app.bundle.js"></script>
 </body>
 </html>

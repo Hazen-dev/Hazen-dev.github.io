@@ -1,6 +1,7 @@
 body, p {
   margin: 0;
   font-family: "Poppins", sans-serif;
+  color: white;
 }
 
 .top {
@@ -9,13 +10,12 @@ body, p {
   background-repeat: no-repeat;
   background-clip: content-box;
   height: 100vh;
-  width: 100vw;
 }
 .top__header {
   color: white;
   background: rgba(0, 0, 0, 0.4);
   height: 10%;
-  width: 100vw;
+  width: 100%;
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -35,16 +35,20 @@ body, p {
 .top__header .top__burger {
   width: 3rem;
   height: auto;
-  margin-right: 1rem;
+  margin-right: 2rem;
 }
 .top__header .top__ul-element {
   list-style-type: none;
   display: flex;
-}
-.top__header .top__ul-element--none {
-  display: none;
+  width: 100%;
+  height: 100%;
+  margin: 0;
+  padding: 0;
+  align-items: center;
+  font-size: 1.7rem;
 }
 .top__main-content {
+  max-height: 90vh;
   height: 90%;
   width: 100%;
   display: grid;
@@ -55,23 +59,27 @@ body, p {
   display: flex;
   flex-direction: column;
   align-self: center;
+  height: 60%;
   align-items: center;
-  height: 100%;
-  justify-content: space-around;
 }
 .top__main-content .top__main-text .top__text {
   margin: 0;
   font-size: 2rem;
   text-align: center;
+  font-style: normal;
 }
 .top__main-content .top__main-text .top__input {
-  width: 70%;
+  width: 80%;
   height: 2.6rem;
   justify-self: center;
-  margin-top: 0;
-  background: rgba(0, 0, 0, 0.8);
+  margin: 0;
+  background: rgba(0, 0, 0, 0.5);
+  border-radius: 51px;
   border: none;
-  border-radius: 50%;
+  outline: none;
+  text-indent: 15px;
+  font-size: 1.7rem;
+  color: white;
 }
 .top__main-content .top__main-weather {
   color: white;
@@ -87,11 +95,24 @@ body, p {
 }
 .top__main-content .top__main-weather .top__main-temperature {
   font-size: 1.5rem;
+  line-height: 45px;
 }
 
 @media screen and (max-width: 300px) {
   .top__header .top__ph-logo .top__header-text {
     display: none;
+  }
+  input::placeholder {
+    color: transparent;
+  }
+  .top__main-text {
+    justify-content: space-between !important;
+  }
+  .top__main-content .top__main-text .top__text {
+    margin-bottom: 0;
+  }
+  .footer .footer__main-text {
+    font-size: 0.8rem;
   }
 }
 @media screen and (min-width: 500px) and (max-width: 900px) {
@@ -101,17 +122,25 @@ body, p {
     align-items: center;
     width: 80%;
     justify-self: center;
+    display: none !important;
   }
   .top__input {
     justify-self: flex-start !important;
   }
+  .top__main-text {
+    justify-content: center;
+  }
 }
-@media screen and (min-width: 300px) {
+@media screen and (min-width: 300px) and (max-width: 900px) {
   .top .top__main-weather .top__main-cloud {
     width: 120px;
   }
   .top__text {
     font-size: 3rem !important;
+    margin-bottom: 5rem !important;
+  }
+  .top__main-content .top__main-text .top__input {
+    height: 250px !important;
   }
 }
 @media screen and (min-width: 900px) {
@@ -129,8 +158,9 @@ body, p {
     height: 87%;
   }
   .top__main-text {
+    margin: 2rem 0 0 0;
     justify-self: center;
-    justify-content: center !important;
+    justify-content: flex-start !important;
   }
   .top__text {
     align-self: stretch;
@@ -140,17 +170,95 @@ body, p {
   }
   .top__input {
     width: 25rem !important;
-    margin-top: 5rem !important;
+    margin-top: 1.5rem !important;
   }
   .top__main-weather {
     margin: 0 0 6rem;
   }
 }
+@media screen and (min-width: 300px) and (max-width: 900px) {
+  .wmain__text {
+    font-size: 2.5rem;
+    text-align: center;
+    padding-top: 2rem !important;
+  }
+}
+@media screen and (min-width: 600px) {
+  .wmain .wmain__text {
+    font-size: 4rem;
+    padding-top: 2.7rem;
+    padding-bottom: 1rem;
+  }
+  .wmain .wmain__day--pc {
+    font-size: 1.5rem;
+    width: 200px;
+    height: 330px;
+    justify-self: center;
+  }
+  .wmain .wmain__container--pc {
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+    grid-template-rows: 0;
+  }
+  .wmain .wmain__day5 {
+    grid-column-start: 5;
+    grid-column-end: 5;
+  }
+}
+@media screen and (min-width: 300px) and (max-width: 600px) {
+  .wmain .wmain__container--pc {
+    height: 50rem;
+  }
+}
+@media screen and (min-width: 800px) and (max-width: 1090px) {
+  .wmain .wmain__day--pc {
+    width: auto;
+  }
+  .top__ph-logo {
+    margin-left: 1rem;
+  }
+}
+@media screen and (min-width: 600px) and (max-width: 800px) {
+  .wmain__container {
+    grid-template-columns: 1fr 1fr 0 0 0 0 0 !important;
+    grid-template-rows: 1fr 1fr 1fr 0 0 0 !important;
+  }
+  .wmain__day--pc {
+    align-self: center !important;
+    justify-self: center !important;
+  }
+  .wmain__day3 {
+    grid-column-start: 1;
+  }
+  .wmain__day4 {
+    grid-column-start: 2;
+  }
+  .wmain__day5 {
+    grid-column-start: 1 !important;
+    grid-row-start: 3;
+    grid-row-end: 3;
+  }
+}
+.kontakt {
+  margin-left: 20vw;
+  list-style-type: none;
+  font-size: 1.7rem;
+  margin-right: 1.5rem;
+}
+
+@media screen and (min-width: 800px) {
+  .top__logo {
+    margin-left: 2rem !important;
+  }
+}
 ::-webkit-input-placeholder {
-  font-size: 135%;
+  font-size: 1.4rem;
   color: white;
   text-indent: 15px;
   padding-top: 0px;
+}
+
+.top__element {
+  margin: 0 2rem 0 2rem;
 }
 
 /*# sourceMappingURL=header.css.map */
